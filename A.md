@@ -55,3 +55,40 @@ An abstract class can contain **static** methods. These **static** methods, if t
 
 A class cannot be declared as both **abstract** and **final**. These 2 declarations are in conflict because a final class cannot be subclassed, and subclassing is all that can be done with an abstract class.
 
+---
+
+## access
+
+> Access is part of scope.
+
+The scope of a name is determined by *where* it is declared, while the access of a name is *how* it is declared.
+
+The access qualifiers can be used to modify the scope. Four access qualifiers exist: *public, private, protected* and the default access (aka *package* access)
+
+### public 
+
+- A public class or interface can be accessed by any code that can access the package in which the class is declared.
+- A public class or interface member (variable, method, or constructor) can be accessed by any code that can access the class or interface in which it is declared.
+- A public member (variable, method, or contructor) can be accessed directly from a subclass without qualification. If the subclass has overriden the name in the super class, it can still be accessed with an expression of the form **super**.name.
+- A public constructor can be accessed from a subclass by the expression **super()**.
+
+### private
+
+- A class or interface member (variable, method, or constructor) declared as privatre can be accessed only from within the compilation unit in which it is declared.
+
+### protected
+
+- The protected constructor of a class can be accessed by code in the same package in which the class is decalred - or by the code in any subclass of the class in which the protected constructor is declared.
+- A protected ember (variable, method, or constructor) can be accessed directly from a subclass without qualification. If the subclass has overriden the name in the super class, it can still be accessed with an expression of the form **super**.name.
+- A protected constructor can be accessed from a subclass by the expression **super()**
+- A protected variable or method is inherited by any subclass of the class in which it is declared.
+
+### The default
+
+If no access modifier is declared, the default is assumed.
+- A class that has no access declaration can be accessed only within the package in which it is declared.
+- Interface members (method and variables) default to **public**.
+- A constuctor can be accessed from a subclass by the expression **super()** only if the subclass is in the same package.
+- A variable or method with defualt acess is inherited only by subclasses that are in the same package as the class in which it is declared.
+
+---
