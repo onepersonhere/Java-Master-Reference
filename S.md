@@ -198,14 +198,14 @@ Ending counter: 3
 
 ---
 
-## static initializers
+## Static initializers
 
 There is one place for executable code in Java other than inside a method - inside a **static initializer**. This is a block of code used to set the initial value of a static field.
 
 **No exceptions**  
 A static initializer block cannot throw checked exceptions. This cannot be done directly or indirectly (by calling a method that throws an exception). Although a static initializer cannot throw an exception, it can catch one - it is valid to include a **try-catch** block inside the static initializer.
 
-**An unreliable combination**
+**An unreliable combination**  
 Becuase static initializer code can instatiate objects and call methods, it is possible to write a program such that the initialization of class A could require that class B be initialized, and class B could, in turn, depend on class A. This cannot be reliably detected by the compiler (because A and B could be compiled separately), so when this happens, some of the variables may simply not be initialized.
 
 **Example**  
