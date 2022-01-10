@@ -158,7 +158,7 @@ SCN: Blue Red
 ```
 Each of these lines is output from **StaticColorName**, and as you can see, each object modifies the same field value.
 
-**Example 2** 
+**Example 2**  
 This example demostrates that static variables can be accessed from static and nonstatic methods:
 ```
 public class StaticShare{
